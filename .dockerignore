@@ -1,0 +1,15 @@
+# .dockerignore
+node_modules
+.next
+out
+dist
+.git
+.gitignore
+npm-debug.log
+yarn-error.log
+pnpm-lock.yaml
+*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local

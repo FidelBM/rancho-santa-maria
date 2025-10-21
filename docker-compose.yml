@@ -1,0 +1,18 @@
+# docker-compose.yml
+version: "3.9"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: selfless-game:latest
+    container_name: selfless-web
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_TELEMETRY_DISABLED=1
+      # Añade aquí variables que uses en runtime:
+      # - NEXT_PUBLIC_API_URL=https://...
+    restart: unless-stopped
